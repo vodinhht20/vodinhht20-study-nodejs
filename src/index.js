@@ -3,9 +3,16 @@ const path = require('path');
 const app = express();
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
-const port = 3000
+const port = 3000;
+
+const route = require('./routes');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
 
 // HTTP LOGGER
 // app.use(morgan('combined'));
@@ -15,11 +22,7 @@ app.engine('hbs', handlebars({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
 
-app.get('/', function(req, res) {
-    res.render('home');
-})
-app.get('/intro', function(req, res) {
-    res.render('intro');
-})
+//Routes init
+route(app);
 
-app.listen(port)
+app.listen(port);
