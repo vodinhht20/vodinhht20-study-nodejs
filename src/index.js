@@ -15,9 +15,9 @@ db.connect();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
-    express.urlencoded({
-        extended: true,
-    }),
+  express.urlencoded({
+    extended: true,
+  }),
 );
 app.use(express.json());
 
@@ -27,7 +27,7 @@ app.use(express.json());
 //Template engine
 app.engine('hbs', handlebars({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resource/views'));
+app.set('views', path.join(__dirname, 'resource', 'views'));
 
 //Routes init
 route(app);

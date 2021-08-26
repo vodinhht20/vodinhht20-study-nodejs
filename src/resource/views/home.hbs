@@ -318,103 +318,23 @@
                     </form>
                 </div>
                 <!-- end box-product-search -->
-                <div class="box-product-showroom">
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
+                <div class="box-product-showroom row">
+                    {{#each product}}
+                    <div class="col-sm-6 col-lg-4 product-item">
+                        <div class="card">
+                            <a href="/product/{{this.slug}}">
+                                <img class="card-img-top" src="../img/{{this.image}}" alt="Đây Là Sản Phẩm">
+                            </a>
+                            <div class="card-body">
+                                <a href="/product/{{this.slug}}">
+                                    <h5 class="card-title product-name">{{this.name}}</h5>
+                                </a>
+                                <p class="card-text pproduct-price">{{this.price}}</p>
+                                <a href="#" class="btn btn-primary">Mua Ngay</a>
                             </div>
                         </div>
                     </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-img">
-                            <img src="./img/product001.jpg" alt="anh san pham">
-                        </div>
-                        <div class="product-information">
-                            <p>Cồn rửa tay khô</p>
-                            <div class="price">
-                                <span class="price-sale">99.000đ</span>
-                                <span class="price-root">150.000đ</span>
-                            </div>
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
