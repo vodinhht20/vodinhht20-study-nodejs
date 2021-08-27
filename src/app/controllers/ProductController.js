@@ -1,21 +1,28 @@
 const Product = require('../models/Couser');
-const { mutipleMongooseToObject } = require('../../utill/mongoose');
-class ProductController {
-    // Phương thức GET /product/:slug
+const { MongooseToOject } = require('../../util/moongose');
+
+class ProductsController {
+    // Phương thức GET / News/slug
     show(req, res, next) {
-            Product.findOne({ slug: req.params.slug })
-                .then(product => {
-                    res.json(product);
-                })
-                .catch(next);
-        }
-        // test(req, res) {
-        //     Product.find({}, function(err, product) {    // in ra toàn bộ data
-        //         if (!err) {
-        //             res.json(product);
-        //         }
-        //     });
-        // }
+        Product.findOne({ slug: req.params.slug })
+            .then((Product) => {
+                res.render('product/show', { Product: MongooseToOject(Product) });
+            })
+            .catch(next);
+    }
+    create(req, res) {
+        res.render('product/create');
+    }
+    store(req, res, next) {
+        const dataForm = req.body;
+        dataForm.image = `https://img.youtube.com/vi/${req.body.videoID}/sddefault.jpg`;
+        const product = new Product(req.body);
+        product.save()
+            .then(() => { res.redirect('/') })
+            .catch(error => {
+
+            })
+    }
 }
 
-module.exports = new ProductController();
+module.exports = new ProductsController();

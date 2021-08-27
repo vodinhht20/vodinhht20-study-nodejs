@@ -555,6 +555,52 @@ footer p {
   margin: 0;
   color: #fff; }
 
+.sanphamhienthi {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center; }
+
+.sanphamhienthi .card-img-top {
+  width: 50%; }
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-row-gap: 1.2rem; }
+
+.card-body p.card-price {
+  color: red;
+  font-size: 22px;
+  font-weight: 600; }
+
+.alert-dark {
+  background: #e9ecef; }
+
+.ads-product img {
+  margin-bottom: 1rem;
+  width: 100%; }
+
+.row.sanphamlienquan {
+  width: 100%;
+  margin: 1rem 0 0 0; }
+
+.tieude {
+  margin: 0 !important;
+  padding: 0; }
+
+.form-create-product form {
+  border-radius: 20px;
+  margin: 20px 0;
+  background-color: #e2e2e2;
+  padding: 20px; }
+
+.form-create-product button {
+  display: block;
+  margin: auto; }
+
 @media (max-width: 739.9px) {
   .item-big,
   .cartsearch {

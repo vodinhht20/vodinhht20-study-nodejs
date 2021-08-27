@@ -2,10 +2,14 @@ const mongoose = require('mongoose');
 
 async function connect() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/hospital_db');
-    console.log('Kết Nối DB Thành Công!');
+    await mongoose.connect('mongodb://localhost:27017/hospital_db', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('   Kết nối thành công');
   } catch (error) {
-    console.log('Kết Nối DB Fail nhé !');
+    console.log('Kết nối thất bại');
   }
 }
+
 module.exports = { connect };
