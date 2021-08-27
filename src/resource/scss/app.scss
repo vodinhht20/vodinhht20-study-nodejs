@@ -135,6 +135,7 @@
     background-color: #fff;
     box-shadow: 2px 1px 2px 0px #848181;
     border: 1px solid rgba(184, 184, 184, 0.438);
+    z-index: 1;
 }
 
 .item-small a {
@@ -347,7 +348,7 @@
 .introduce .title-sub span {
     color: var(--bg-color);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .introduce .title-primary h1 {
@@ -460,13 +461,8 @@
     margin: auto;
 }
 
-.services-tab {
-    display: flex;
-    justify-content: space-between;
-}
-
 .service-tab-item {
-    width: 170px;
+    max-width: 170px;
     height: 170px;
     display: flex;
     justify-content: center;
@@ -500,6 +496,10 @@
 
 .service-tab-item:hover img {
     filter: brightness(5);
+}
+
+.services-tab {
+    justify-content: space-between;
 }
 
 .services-tab .active {
@@ -742,7 +742,7 @@ footer p {
     margin: auto;
 }
 
-@media (max-width: 739.9px) {
+@media (max-width: 768px) {
     .item-big,
     .cartsearch {
         display: none;
@@ -753,9 +753,49 @@ footer p {
     .logo {
         text-align: center;
     }
+    .departments .department-item {
+        width: 150px;
+        height: 140px;
+        padding: 0px 10px;
+    }
+    .department-item-number span {
+        font-size: 60px;
+    }
     .services-tab {
-        flex-direction: column;
-        align-items: center;
         grid-row-gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .service-tab-item {
+        margin: 0 20px;
+    }
+    .services-main .content-title {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 739.9px) {
+    .departments .department-item {
+        width: 150px;
+        height: 140px;
+        padding: 0px 5px;
+    }
+    .department-item-number span {
+        font-size: 60px;
+        padding: 0 20px;
+    }
+    .services-main .bnt-order-now a+a {
+        margin: 0;
+    }
+}
+
+@media (max-width: 414px) {
+    .service-tab-item {
+        flex-direction: row;
+        max-width: 90%;
+        height: 85px;
+        justify-content: unset;
+    }
+    .service-tab-item img {
+        margin-right: 20px;
     }
 }
