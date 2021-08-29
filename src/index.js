@@ -41,5 +41,4 @@ app.set('views', path.join(__dirname, 'resource', 'views'));
 //Routes init
 route(app);
 
-app.listen(process.env.PORT);
-// app.listen(port);
+app.listen(port);
