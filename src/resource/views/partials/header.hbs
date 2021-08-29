@@ -93,60 +93,63 @@
           </div>
         </div>
         {{! start nav overlay (mobile)}}
-        <div class='navbars_overlay'>
-          <div class='navbars_mobile'>
-            <div class="login_user">
-              <img src="../img/myavata.jpg" alt="">
-              <span>Võ Định</span>
-            </div>
-            <div class='search'>
-              <form action=''>
-                <label for="">Tìm Kiếm: </label>
-                <input type='text' class='inp__search' placeholder='Tìm Kiếm ...' />
-                <button><i class='fas fa-search'></i></button>
-              </form>
-            </div>
-            <ul class='item-big'>
-              <li class='nav-item'>
-                <a href='/'><i class="fas fa-home"></i>Trang Chủ</a>
-              </li>
-              <li class='nav-item'>
-                <a href='/intro'><i class="fas fa-city"></i>Giới Thiệu</a>
-              </li>
-              <li class='nav-item'>
-                <a href=''><i class="fas fa-clipboard-list"></i>Đặt Lịch Hẹn <i class="fas fa-plus-circle"></i></a>
-                  <ul class='item-small'>
-                    <li><a href=''>Tầm Soát Ung Thư</a></li>
-                    <li><a href=''>Mô Học</a></li>
-                    <li><a href=''>Khám Tổng Quát</a></li>
-                    <li><a href=''>Xét Nghiệm Máu</a></li>
-                    <li><a href=''>Xét Nghiệm Di Truyền</a></li>
-                    <li><a href=''>Tế Bào Học</a></li>
-                  </ul>
-              </li>
-              <li class='nav-item'>
-                <a href=''>Sản Phẩm <i class="fas fa-plus-circle"></i></a>
+        <div class='navbars_overlay'></div>
+        <div class='navbars_mobile'>
+          <div class="login_user">
+            <img src="../img/myavata.jpg" alt="">
+            <span>Võ Định</span>
+          </div>
+          <div class='search'>
+            <form action=''>
+              <label for="">Tìm Kiếm: </label>
+              <input type='text' class='inp__search' placeholder='Tìm Kiếm ...' />
+              <button><i class='fas fa-search'></i></button>
+            </form>
+          </div>
+          <ul class='item-big'>
+            <li class='nav-item'>
+              <a href='/'>Trang Chủ</a>
+            </li>
+            <li class='nav-item'>
+              <a href='/intro'>Giới Thiệu</a>
+            </li>
+            <li class='nav-item'>
+              <a href=''>Đặt Lịch Hẹn</a>
                 <ul class='item-small'>
-                  <li><a href='/product/create'>Thêm Sản Phẩm</a></li>
-                  <li>
-                    <a href='/me'>Danh Sách Sản Phẩm</a>
-                    <i class="fas fa-plus-circle"></i>
-                    <ul class='item-small-child'>
-                      <li><a href=''>Dược Phẩm</a></li>
-                      <li><a href=''>Dược Phẩm</a></li>
-                    </ul>
-                  </li>
-                  <li><a href=''>Phụ Kiện Ý Tế</a></li>
-                  <li><a href=''>Máy Chụp X Quang</a></li>
+                  <li><a href=''>Tầm Soát Ung Thư</a></li>
+                  <li><a href=''>Mô Học</a></li>
+                  <li><a href=''>Khám Tổng Quát</a></li>
+                  <li><a href=''>Xét Nghiệm Máu</a></li>
+                  <li><a href=''>Xét Nghiệm Di Truyền</a></li>
+                  <li><a href=''>Tế Bào Học</a></li>
                 </ul>
-              </li>
-              <li class='nav-item'>
-                <a href=''>Tin Tức</a>
-              </li>
-              <li class='nav-item'>
-                <a href=''>Liên Hệ</a>
-              </li>
-            </ul>
+                <i class="bnt_show_nav-children fas fa-plus-circle"></i>
+            </li>
+            <li class='nav-item'>
+              <a href=''>Sản Phẩm</a>
+              <ul class='item-small'>
+                <li><a href='/product/create'>Thêm Sản Phẩm</a></li>
+                <li>
+                  <a href='/me'>Danh Sách Sản Phẩm</a>
+                  {{!-- <ul class='item-small-child'>
+                    <li><a href=''>Dược Phẩm</a></li>
+                    <li><a href=''>Dược Phẩm</a></li>
+                  </ul> --}}
+                </li>
+                <li><a href=''>Phụ Kiện Ý Tế</a></li>
+                <li><a href=''>Máy Chụp X Quang</a></li>
+              </ul>
+              <i class="bnt_show_nav-children fas fa-plus-circle"></i>
+            </li>
+            <li class='nav-item'>
+              <a href=''>Tin Tức</a>
+            </li>
+            <li class='nav-item'>
+              <a href=''>Liên Hệ</a>
+            </li>
+          </ul>
+          <div class="bnt__close_navbars">
+            <i class="fas fa-times"></i>
           </div>
         </div>
 
