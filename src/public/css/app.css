@@ -761,6 +761,21 @@ footer p {
   display: block;
   margin: auto; }
 
+.title-listProduct {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center; }
+  .title-listProduct .fa-trash {
+    font-size: 30px;
+    color: #898989; }
+
+.title-listProduct sub {
+  background: orange;
+  padding: 1px 5px;
+  color: #fff;
+  border-radius: 50%; }
+
 @media (max-width: 992px) {
   .navbars_pc {
     display: none; }

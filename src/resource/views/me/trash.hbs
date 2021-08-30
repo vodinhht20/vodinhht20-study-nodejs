@@ -5,14 +5,12 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Trang Chủ</a></li>
                 <li class="breadcrumb-item"><a href="/">Sản Phẩm</a></li>
-                <li class="breadcrumb-item"><a href="/">Danh Sách Sản Phẩm</a></li>
+                <li class="breadcrumb-item"><a href="/">Thùng Rác</a></li>
             </ol>
         </nav>
         <div class="title-listProduct">
-          <h1>Danh Sách Sản Phẩm</h1>
-          {{#if deleteCount}}
-          <a href="me/trash" title="Thùng Rác"><i class="fas fa-trash"></i><sub>{{deleteCount}}</sub></a>
-          {{/if}}
+          <h1>Thùng Rác To</h1>
+          <a href="/me" title="Thùng Rác">Quay Lại <i class="fas fa-angle-right"></i></a>
         </div>
         <thead class="thead-dark">
             <tr>
@@ -20,6 +18,7 @@
             <th scope="col">Tên Sản Phẩm</th>
             <th scope="col">Đơn Giá</th>
             <th scope="col">VideoID</th>
+            <th scope="col">Thời Gian Xóa</th>
             <th colspan="2">Hành Động</th>
             </tr>
         </thead>
@@ -30,21 +29,23 @@
                 <td>{{this.name}}</td>
                 <td>{{this.price}}</td>
                 <td>{{this.videoID}}</td>
+                <td>{{this.deletedAt}}</td>
                 <td>
-                    <a href="/product/{{this._id}}/edit" class="btn btn-success">Sửa</a>
+                    <a href="" class="btn btn-success bnt-restore" data-id="{{this._id}}">Khôi Phục</a>
                 </td>
                 <td>
-                    <a href="/" class="btn btn-danger" data-toggle="modal" data-id="{{this._id}}" data-target="#deleteProduct">Xóa</a>
+                    <a href="/" class="btn btn-danger" data-toggle="modal" data-id="{{this._id}}" data-target="#deleteProduct">Dọn Ngay</a>
                 </td>
             <tr>
               {{else}}
-                <td colspan="5" style="text-align: center;">Không Có Sản Phẩm Nào!
-                  <a href="product/create">Thêm Sản Phẩm</a>
+                <td colspan="5" style="text-align: center;">Không Có Rác Ở Đây
                 </td>
             {{/each}}
         </tbody>
         </table>
     </div>
+
+
     {{!-- // comfim delete product --}}
 <!-- Modal -->
 <div id="deleteProduct" class="modal" tabindex="-1" role="dialog">
@@ -57,34 +58,48 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Bạn có muốn xóa sản phẩm này không ?</p>
+        <p>Bạn đang muốn xóa sản phẩm này! Hành động này không thể khôi phục. Xác nhận xóa ?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" id="bnt-delete-product" class="btn btn-danger">Xác nhận</button>
+        <button type="button" id="bnt-delete-product" class="btn btn-danger">Xóa Vĩnh Viễn</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
       </div>
     </div>
   </div>
 </div>
 
-{{!-- from delete --}}
 <form name="delete-product-form" method="POST"></form>
+<form name="restore-product-form" method="POST"></form>
 </main>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var productID;
     var deleteFrom = document.forms['delete-product-form'];
+    var restoreFrom = document.forms['restore-product-form'];
     var bntDeleteProduct = document.getElementById('bnt-delete-product');
+    var bntRestore = $('.bnt-restore');
+
 
     $('#deleteProduct').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget); // Button that triggered the modal
       productID = button.data('id');
     });
     bntDeleteProduct.onclick = function() {
-      deleteFrom.action = '/product/' + productID + '?_method=DELETE';
+      deleteFrom.action = '/product/' + productID + '/force?_method=DELETE';
       deleteFrom.submit();
     }
+    // restore
+    bntRestore.click(function (e) {
+        e.preventDefault();
+        var productID = $(this).data('id');
+       restoreFrom.action = '/product/' + productID + '/restore?_method=PATCH';
+       restoreFrom.submit();
+    })
   });
-  
+   
+
+
+ 
+
     
 </script>
