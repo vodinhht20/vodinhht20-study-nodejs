@@ -26,11 +26,11 @@
         --bor-rad-color: rgb(39, 131, 216);
     }
     
-    ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         width: 5px;
     }
     
-    ::-webkit-scrollbar-thumb {
+     ::-webkit-scrollbar-thumb {
         background: var(--bg-color);
     }
     
@@ -38,6 +38,7 @@
         background-color: var(--bg-color);
         height: 35px;
         color: #fff;
+        h1 {}
     }
     
     .container-fluid {
