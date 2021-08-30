@@ -5,19 +5,19 @@
     "scripts": {
         "formatcode": "prettier --single-quote --trailing-comma all --write \"src/**/*.{js,json,scss}\"",
         "watch": "node-sass -w src/resource/scss/ -o src/public/css/",
-        "start": "node src/index.js",
+        "start": "nodemon --inspect src/index.js localhost 3000",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/vodinhht20/vodinhht20-study-nodejs.git"
+        "url": "git+https://github.com/trantienvip/hocnodejs.git"
     },
     "author": "trantiendev",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/vodinhht20/issues"
+        "url": "https://github.com/trantienvip/hocnodejs/issues"
     },
-    "homepage": "https://github.com/vodinhht20#readme",
+    "homepage": "https://github.com/trantienvip/hocnodejs#readme",
     "dependencies": {
         "express": "^4.17.1",
         "express-handlebars": "^5.3.3",
