@@ -5,7 +5,7 @@ class ProductsController {
     me(req, res, next) {
 
         Promise.all([Product.find({}), Product.countDocumentsDeleted()])
-            .then(([Product, deleteCount, title]) => {
+            .then(([Product, deleteCount]) => {
                 res.render('me/me', {
                     title: 'Danh Sách Sản Phẩm | Medical Center',
                     Product: mutipleMongooseToOject(Product),
@@ -30,14 +30,24 @@ class ProductsController {
         //     .catch(next);
     }
     trash(req, res, next) {
-        Product.findDeleted({})
-            .then((Product) => {
+        Promise.all([Product.findDeleted({}), Product.countDocumentsDeleted()])
+            .then(([Product, deleteCount]) => {
                 res.render('me/trash', {
-                    title: 'Thùng Rác',
+                    title: 'Thùng Rác | Medical Center',
                     Product: mutipleMongooseToOject(Product),
+                    deleteCount,
                 });
             })
             .catch(next);
+
+        // Product.findDeleted({})
+        //     .then((Product) => {
+        //         res.render('me/trash', {
+        //             title: 'Thùng Rác',
+        //             Product: mutipleMongooseToOject(Product),
+        //         });
+        //     })
+        //     .catch(next);
 
     }
 }
