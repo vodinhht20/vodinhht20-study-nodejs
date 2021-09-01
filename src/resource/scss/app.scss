@@ -450,7 +450,7 @@
         color: var(--bg-color);
     }
     
-    .cart sub {
+    sub {
         padding: 1px 3px;
         background-color: orange;
         color: #fff;
@@ -929,52 +929,29 @@
         display: block;
         margin: auto;
     }
-    
-    // danh sách sản phẩm
-    .title-listProduct {
+    .title-me{
         display: flex;
         justify-content: space-between;
-        padding: 0 20px;
         align-items: center;
-        & a {
-            text-decoration: none;
-        }
-        & .fa-trash {
-            font-size: 30px;
+        & .fas.fa-trash{
             color: #898989;
-            text-shadow: 0px 2px 2px black;
+        font-size: 23px;
         }
-        & .header_title {
-            display: inherit;
-            & span {
-                background-color: orange;
-                color: #fff;
-                width: 15px;
-                height: 25px;
-                text-align: center;
-                border-radius: 50%;
-                margin-left: 10px;
-            }
+        & a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            grid-column-gap: 2px;
         }
     }
-    
-    .title-listProduct sub {
-        background: orange;
-        padding: 1px 5px;
-        color: #fff;
-        border-radius: 50%;
-    }
-    
-    .box-control-checkbox {
+    .checkall{
         display: flex;
         align-items: center;
-        margin: 0 15px;
-        & .select-all-options {
-            display: flex;
-            margin-left: 50px;
-        }
+        grid-column-gap: 5px;
     }
-    
+    #inlineFormCustomSelectPref{
+        width: 120px;
+    }
     @media (max-width: 992px) {
         .navbars_pc {
             display: none;

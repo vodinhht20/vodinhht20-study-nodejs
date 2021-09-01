@@ -366,7 +366,7 @@
 .cart span:hover {
   color: var(--bg-color); }
 
-.cart sub {
+sub {
   padding: 1px 3px;
   background-color: orange;
   color: #fff;
@@ -761,41 +761,26 @@ footer p {
   display: block;
   margin: auto; }
 
-.title-listProduct {
+.title-me {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
   align-items: center; }
-  .title-listProduct a {
-    text-decoration: none; }
-  .title-listProduct .fa-trash {
-    font-size: 30px;
+  .title-me .fas.fa-trash {
     color: #898989;
-    text-shadow: 0px 2px 2px black; }
-  .title-listProduct .header_title {
-    display: inherit; }
-    .title-listProduct .header_title span {
-      background-color: orange;
-      color: #fff;
-      width: 15px;
-      height: 25px;
-      text-align: center;
-      border-radius: 50%;
-      margin-left: 10px; }
+    font-size: 23px; }
+  .title-me a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    grid-column-gap: 2px; }
 
-.title-listProduct sub {
-  background: orange;
-  padding: 1px 5px;
-  color: #fff;
-  border-radius: 50%; }
-
-.box-control-checkbox {
+.checkall {
   display: flex;
   align-items: center;
-  margin: 0 15px; }
-  .box-control-checkbox .select-all-options {
-    display: flex;
-    margin-left: 50px; }
+  grid-column-gap: 5px; }
+
+#inlineFormCustomSelectPref {
+  width: 120px; }
 
 @media (max-width: 992px) {
   .navbars_pc {
