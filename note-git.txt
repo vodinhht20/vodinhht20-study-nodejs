@@ -1,0 +1,36 @@
+<!-- col-a-b 
+    với a: là ký hiệu của thiết bị::
+                                 nhở hơn 768px: xs
+                                 lơn hơn hoặc bằng  768px: sm;
+                                 lớn hơn hoặc bằng 992px: md;
+                                 lơn hơn hoặc bằng 1200px: lg;
+    với b: là các số cột mà bó chiếm trong boostrap
+!>
+https://themes.sapo.vn/demo/ego-medical
+div > p: style cho các phần tử p nằm trong thẻ div
+div + p: style cho phần tử p nằm ngay sau khối div
+p ~ ul: style cho các phần tử ul nằm sau thẻ p
+
+
+học git
+step1: Commit code 
+- git add filename -> add từng file 1
+- git add -> add tất cả các file
+- git commit -m 'message' -> tạo ghi chú
+
+step2: add remote - git remote add origin ...... .git - dùng để tạo remote trên github 
+
+các câu lệnh git cơ bản
+
+- git branch -d tên nhánh -> xóa 1 nhánh
+- git checkout -b tên nhánh -> tạo mới một nhánh
+- git branch -> xem danh sách các nhánh
+- git checkout ten_nhanh -> Chuyển sang nhánh khác
+- git remote add ten_remote link_remote -> tạo một remote mới
+- git push ten_remote ten_nhanh -> đẩy code lên 1 nhánh
+- git pull ten_remote ten_nhanh -> lấy các code mới của nhánh đó về
+
+
+-- khôi phục lại dữ liệu khi commit
+- git reset --hard mãCommit -> khôi phục lại data khi commit
+- git reflog -> Hiện thị các lệnh commit
