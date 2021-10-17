@@ -34,3 +34,4 @@ các câu lệnh git cơ bản
 -- khôi phục lại dữ liệu khi commit
 - git reset --hard mãCommit -> khôi phục lại data khi commit
 - git reflog -> Hiện thị các lệnh commit
+- git fetch -a -> lấy hết các nhánh mới trên git về
